@@ -1,6 +1,6 @@
 {
   "name": "canine-database",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A web-based application where users can search for Chesapeake Bay Retrievers (CBRs) and see information about the dog, titles, health clearances, and pedigree.",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
