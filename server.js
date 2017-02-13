@@ -1,12 +1,11 @@
-/* globals console, process, require */
-
+/* jshint node: true */
 
 var express = require('express');
 var bp = require('body-parser');
 var mongoose = require('mongoose');
 
 var app = express();
-var port = process.env.PORT || 8001;
+var port = process.env.PORT || 8080;
 
 app.use(bp.urlencoded({
 	extended: true
@@ -19,9 +18,7 @@ app.use(bp.json());
 var dbpath = "mongodb://greenlantern:NewOA@ds151059.mlab.com:51059/canine-database";
 mongoose.connect(dbpath);
 
-
 var Dog = require('./app/models/dog');
-
 
 /* Routes */
 
@@ -38,24 +35,25 @@ router.get('/', function (req, res) {
 	});
 });
 
-router.route('/dogs').post(function (req, res) {
-	var dog = new Dog();
-	console.log(dog);
+router.route('/dogs')
 
+	// create a bear (accessed at POST http://localhost:8080/bears)
+	.post(function(req, res) {
 
-	/* dog.save(function (error) {
-		console.log('Trying to save the dog!');
+		var dog = new Dog();		// create a new instance of the Bear model
+		dog.name = req.body.name;  // set the bears name (comes from the request)
 
-		if (error)
-			res.send(error);
+		dog.save(function(err) {
+			if (err)
+				res.send(err);
 
-		res.json({
-			message: 'Dog named ' + dog.name + " identified!"
+			res.json({ message: 'Dog created!' });
 		});
-	}); */
-});
 
-// REGISTER OUR ROUTES -------------------------------
+
+	});
+
+
 // all of our routes will be prefixed with /api
 app.use('/api', router);
 
