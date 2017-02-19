@@ -24,7 +24,7 @@ router.route('/dogs')
     .get(dogs.all);
 
 router.route('/dogs/:dog_id')
-    .get(dogs.find)
+    .get(dogs.read)
     .put(dogs.update)
     .delete(dogs.delete);
 

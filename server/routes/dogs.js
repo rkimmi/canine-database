@@ -20,16 +20,7 @@ var dogs = {
         });
     },
 
-    all: function (req, res) {
-        Dog.find(function (err, dogs) {
-            if (err)
-                res.send(err);
-
-            res.json(dogs);
-        });
-    },
-
-    find: function (req, res) {
+    read: function (req, res) {
         Dog.findById(req.params.dog_id, function (err, dog) {
             if (err)
                 res.send(err);
@@ -66,6 +57,15 @@ var dogs = {
             res.json({
                 message: "Dog removed from database!"
             });
+        });
+    },
+    
+    all: function (req, res) {
+        Dog.find(function (err, dogs) {
+            if (err)
+                res.send(err);
+
+            res.json(dogs);
         });
     }
 };
