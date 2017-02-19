@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Chesapeake Database</title>
+	</head>
+
+	<body>
+
+		<h1>Add a Dog</h1>
+
+		<form>
+			<label>
+				<span>Registered Name:</span>
+				<input type="text" name="registered-name" placeholder="Registered name of your dog" />
+			</label>
+
+			<label>
+				<span>Call Name:</span>
+				<input type="text" name="call-name" placeholder="The name that your dog goes by" />
+			</label>
+
+			<label>
+				<span>Date of Birth:</span>
+				<input type="date" name="dob"/>
+			</label>
+
+			<label>
+				<span>Date of Death:</span>
+				<input type="date" name="dod" />
+			</label>
+
+			<label>
+				<span><abbr title="American Kennel Club">AKC</abbr> Registration Number:</span>
+				<input type="text" name="akc-number" />
+			</label>
+
+			<fieldset>
+				<legend>Parents</legend>
+
+				<label>
+					<span>Sire:</span>
+					<input type="text" name="sire" />
+				</label>
+
+				<label>
+					<span>Dam:</span>
+					<input type="text" name="dam" />
+				</label>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Clearances</legend>
+
+				<label>
+					<abbr title="Exercise Induced Collapse">EIC</abbr>
+					<input type="checkbox" name="clearance-eic" />
+				</label>
+
+				<label>
+					<span>EIC Number/Result</span>
+					<input type="text" name="clearance-eic-number" />
+				</label>
+
+				<div>
+					<label>
+						<span>OFA Eyes</span>
+						<input type="checkbox" name="clearance-ofa-eyes" />
+					</label>
+
+					<label>
+						<span>OFA Eyes Number/Result</span>
+						<input type="text" name="clearance-ofa-eyes-number" />
+					</label>
+				</div>
+
+				<div>
+					<label>
+						<span>OFA Hips</span>
+						<input type="checkbox" name="clearance-ofa-hips" />
+					</label>
+
+					<label>
+						<span>OFA Hips Number/Result</span>
+						<input type="text" name="clearance-ofa-hips-number" />
+					</label>
+				</div>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Titles</legend>
+
+				<label>
+					<span>Junior Hunter</span>
+					<input type="checkbox" name="title-junior-hunter" />
+				</label>
+
+				<label>
+					<span>Senior Hunter</span>
+					<input type="checkbox" name="title-senior-hunter" />
+				</label>
+
+				<label>
+					<span>Master Hunter</span>
+					<input type="checkbox" name="title-master-hunter" />
+				</label>
+			</fieldset>
+
+			<button type="submit">Add Dog</button>
+		</form>
+
+	</body>
+</html>

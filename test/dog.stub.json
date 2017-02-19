@@ -1,0 +1,74 @@
+{
+	"name": "Sleepy Hollow's Stormbringer Over Blue Skies",
+	"nickname": "Salem",
+	"breed": "Chesapeake Bay Retriever",
+	"dateOfBirth": "2015-06-05",
+	"gender": "Female",
+	"microchipNo": 956000005044324,
+	"organizations": [
+		{
+			"name": "American Kennel Club",
+			"label": "AKC",
+			"regNo": "SR88100602"
+		}
+	],
+	"breeder": {
+		"name": "Clayton Evans",
+		"kennel": "Blue Skies Chesapeakes",
+		"phone": "555-555-5555",
+		"email": "name@domain.com"
+	},
+	"owner": {
+		"name": "Cathy Martini-Rashid",
+		"phone": "555-555-5555",
+		"email": "name@domain.com"
+	},
+	"trainer": {
+		"name": "Clayton Evans",
+		"kennel": "Blue Skies Chesapeakes",
+		"phone": "555-555-5555",
+		"email": "name@domain.com"
+	},
+	"sire": {
+		"name": "Desert Winds Unintended Consequences",
+		"nickname": "Ruckus",
+		"breed": "Chesapeake Bay Retriever",
+		"dateOfBirth": "2013-04-12",
+		"gender": "Male",
+		"organizations": [
+			{
+				"name": "American Kennel Club",
+				"label": "AKC",
+				"regNo": "SR57929902"
+			}
+		]
+	},
+	"dam": {
+		"name": "Blue Skies Shady Sadie",
+		"nickname": "Sadie",
+		"breed": "Chesapeake Bay Retriever",
+		"dateOfBirth": "2013-09-15",
+		"gender": "Female",
+		"organizations": [
+			{
+				"name": "American Kennel Club",
+				"label": "AKC",
+				"regNo": "SR75241806"
+			}
+		]
+	},
+	"clearances": [
+		{
+			"name": "OFA Hips",
+			"value": "CB-ABC123/4D-EF"
+		},
+		{
+			"name": "OFA Elbows",
+			"value": "CB-ABC123/4D-EF"
+		},
+		{
+			"name": "EIC",
+			"value": "CB-EIC267/7F-PI"
+		}
+	]
+}
