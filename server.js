@@ -34,7 +34,8 @@ app.all('/*', function(req, res, next) {
 var dbpath = "mongodb://greenlantern:NewOA@ds151059.mlab.com:51059/canine-database";
 mongoose.connect(dbpath);
 
-// all of our routes will be prefixed with /api
+
+app.use('/', express.static(__dirname + '/www'));
 app.use('/api', routes);
 
 

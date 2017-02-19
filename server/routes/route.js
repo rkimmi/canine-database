@@ -1,12 +1,12 @@
 /* jshint node: true */
 
+"use strict";
+
 var express = require('express');
 var router = express.Router();
 
 
 var dogs = require('./dogs.js');
-
-var Dog = require('../../app/models/dog');
 
 router.use(function (req, res, next) {
     console.log("Something is happening!");
