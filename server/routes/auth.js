@@ -15,11 +15,7 @@ var auth = {
         var p = data.pw || '';
 
         if(u === '' || p === '') {
-            res.status(401);
-            res.json({
-                "status": 401,
-                "message": "Invalid credentials"
-            });
+            set401(res);
 
             return;
         }
@@ -27,12 +23,7 @@ var auth = {
         var user = auth.validate(u, p);
 
         if(!user) {
-            res.status(401);
-            res.json({
-                "status": 401,
-                "message": "Invalid credentials"
-            });
-
+            set401(res);
             return;
         }
 
@@ -42,6 +33,7 @@ var auth = {
     },
 
     validate: function(u, p) {
+        /* Spoofing DB connection for now */
         var user = {
             name: 'admin',
             role: 'admin',
@@ -52,6 +44,8 @@ var auth = {
     },
 
     validateUser: function(u) {
+        /* Spoofing DB connection for now */
+
         var user = {
             name: 'admin',
             role: 'admin',
@@ -78,6 +72,14 @@ function genToken(user) {
 function expiresIn(days) {
     var date = new Date();
     return date.setDate(date.getDate() + days);
+}
+
+function set401(res) {
+    res.status(401);
+    res.json({
+        "status": 401,
+        "message": "Invalid credentials"
+    });
 }
 
 module.exports = auth;
