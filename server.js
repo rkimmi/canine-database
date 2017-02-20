@@ -36,6 +36,13 @@ mongoose.connect(dbpath);
 
 
 app.use('/', express.static(__dirname + '/www'));
+app.post('/process', function(req, res) {
+    res.json({
+        "message": req.body
+    });
+});
+
+
 app.use('/api', routes);
 
 

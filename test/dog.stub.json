@@ -1,10 +1,13 @@
 {
+    "id": "SR88100602",
 	"name": "Sleepy Hollow's Stormbringer Over Blue Skies",
 	"nickname": "Salem",
 	"breed": "Chesapeake Bay Retriever",
 	"dateOfBirth": "2015-06-05",
 	"gender": "Female",
 	"microchipNo": 956000005044324,
+    "color": "Brown",
+
 	"organizations": [
 		{
 			"name": "American Kennel Club",
@@ -70,5 +73,20 @@
 			"name": "EIC",
 			"value": "CB-EIC267/7F-PI"
 		}
-	]
+	],
+    "photos": [
+        {
+            "url": "http://lorempixel.com/800/600/animals/",
+            "description": "Lorem ipsum dolor sit amet",
+            "isDefault": true
+        },
+        {
+            "url": "http://lorempixel.com/800/600/animals/",
+            "description": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "url": "http://lorempixel.com/800/600/animals/",
+            "description": "Lorem ipsum dolor sit amet"
+        }
+    ]
 }

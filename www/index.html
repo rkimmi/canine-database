@@ -9,7 +9,7 @@
 
 		<h1>Add a Dog</h1>
 
-		<form>
+		<form method="post" action="/process">
 			<label>
 				<span>Registered Name:</span>
 				<input type="text" name="registered-name" placeholder="Registered name of your dog" />
@@ -20,6 +20,25 @@
 				<input type="text" name="call-name" placeholder="The name that your dog goes by" />
 			</label>
 
+            <fieldset>
+                <legend>Gender</legend>
+
+                <label>
+                    <span>Male</span>
+                    <input type="radio" name="gender" value="M">
+                </label>
+
+                <label>
+                    <span>Female</span>
+                    <input type="radio" name="gender" value="F">
+                </label>
+            </fieldset>
+
+			<label>
+				<span><abbr title="American Kennel Club">AKC</abbr> Registration Number:</span>
+				<input type="text" name="akc-number" />
+			</label>
+
 			<label>
 				<span>Date of Birth:</span>
 				<input type="date" name="dob"/>
@@ -28,11 +47,6 @@
 			<label>
 				<span>Date of Death:</span>
 				<input type="date" name="dod" />
-			</label>
-
-			<label>
-				<span><abbr title="American Kennel Club">AKC</abbr> Registration Number:</span>
-				<input type="text" name="akc-number" />
 			</label>
 
 			<fieldset>
@@ -92,20 +106,42 @@
 			<fieldset>
 				<legend>Titles</legend>
 
-				<label>
-					<span>Junior Hunter</span>
-					<input type="checkbox" name="title-junior-hunter" />
-				</label>
+                <div>
 
-				<label>
-					<span>Senior Hunter</span>
-					<input type="checkbox" name="title-senior-hunter" />
-				</label>
+                    <label>
+                        <span>Junior Hunter</span>
+                        <input type="checkbox" name="title-junior-hunter" />
+                    </label>
 
-				<label>
-					<span>Master Hunter</span>
-					<input type="checkbox" name="title-master-hunter" />
-				</label>
+                    <label>
+                        <span>Date Achieved:</span>
+                        <input type="date" name="title-junior-hunter-achieved" />
+                    </label>
+
+                </div>
+
+                <div>
+                    <label>
+                        <span>Senior Hunter</span>
+                        <input type="checkbox" name="title-senior-hunter" />
+                    </label>
+
+                    <label>
+                        <span>Date Achieved:</span>
+                        <input type="date" name="title-senior-hunter-achieved" />
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <span>Master Hunter</span>
+                        <input type="checkbox" name="title-master-hunter" />
+                    </label>
+                    <label>
+                        <span>Date Achieved:</span>
+                        <input type="date" name="title-master-hunter-achieved" />
+                    </label>
+                </div>
 			</fieldset>
 
 			<button type="submit">Add Dog</button>
