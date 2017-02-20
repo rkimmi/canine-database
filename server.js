@@ -28,7 +28,7 @@ app.all('/*', function(req, res, next) {
     }
 });
 
-app.all('/api/*', [require('./middleware/validateRequest')]);
+app.all('/api/*', [require('./server/middleware/validateRequest')]);
 
 app.post('/process', function(req, res) {
     res.json({
