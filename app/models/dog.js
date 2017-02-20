@@ -5,7 +5,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var DogSchema = new Schema({
+var dogSchema = new Schema({
     name: String,
 	nickname: String,
 	dateOfBirth: Date,
@@ -14,4 +14,4 @@ var DogSchema = new Schema({
 	dam: String
 });
 
-module.exports = mongoose.model('Dog', DogSchema);
+module.exports = mongoose.model('Dog', dogSchema);
