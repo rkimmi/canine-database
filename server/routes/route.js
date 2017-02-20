@@ -5,7 +5,7 @@
 var express = require('express');
 var router = express.Router();
 
-
+var auth = require('./auth.js');
 var dogs = require('./dogs.js');
 
 router.use(function (req, res, next) {
@@ -18,6 +18,8 @@ router.get('/', function (req, res) {
         message: "It works! It really works!"
     });
 });
+
+router.post('/login', auth.login);
 
 router.route('/dogs')
     .post(dogs.create)
