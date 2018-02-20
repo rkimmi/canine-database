@@ -12,6 +12,7 @@ var dogSchema = new Schema({
 	dateOfDeath: Date,
 	sire: String,
 	dam: String
+	
 });
 
 module.exports = mongoose.model('Dog', dogSchema);
